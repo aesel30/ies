@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bio Mapel IPAS</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Banner background -->
+  <div class="banner-bg"></div>
+
+  <!-- Konten utama -->
+  <div class="main-content">
+    <img src="buhe.png" alt="Foto Profil" class="profile-pic" />
+    <h3>Mapel PIPAS</h3>
+    <p><strong>Proyek Ilmu Pengetahuan Alam dan Sosial</strong></p>
+    <p>Intan Endah Sari, S.Pd.Gr</p>
+
+    <div class="container">
+      <div class="rectangle" onclick="toggleList('list1')">
+        <h3>Makhluk Hidup dan Lingkungannya</h3>
+        <ul id="list1" class="list">
+          <li><a href="tujuan.jpg">Tujuan Pembelajaran</a></li>
+          <li><a href="https://drive.google.com/file/d/180ggL59kT64sN8Bps2Wg_KsvPmDLjBnQ/view?usp=sharing">Bahan Ajar</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1Y9KXGlr47GHfgdJe9mriVacHajIfFuK0?usp=sharing">LKPD/Worksheet</a></li>
+          <li><a href="#">Upload Tugas</a></li>
+          <li><a href="#">Ulangan Harian 1</a></li>
+        </ul>
+      </div>
+      <div class="rectangle" onclick="toggleList('list2')">
+        <h3>Zat dan Perubahannya</h3>
+        <ul id="list2" class="list">
+          <li><a href="#">Tujuan Pembelajaran</a></li>
+          <li><a href="#">Bahan Ajar</a></li>
+          <li><a href="#">LKPD/Worksheet</a></li>
+          <li><a href="#">Upload Tugas</a></li>
+          <li><a href="#">Ulangan Harian 2</a></li>
+        </ul>
+      </div>
+      <div class="rectangle" onclick="toggleList('list3')">
+        <h3>Energi dan Perubahannya</h3>
+        <ul id="list3" class="list">
+          <li><a href="#">Tujuan Pembelajaran</a></li>
+          <li><a href="#">Bahan Ajar</a></li>
+          <li><a href="#">LKPD/Worksheet</a></li>
+          <li><a href="#">Upload Tugas</a></li>
+          <li><a href="#">Ulangan Harian 3</a></li>
+        </ul>
+      </div>
+      <div class="rectangle" onclick="toggleList('list4')">
+        <h3>Bumi dan Antariksa</h3>
+        <ul id="list4" class="list">
+          <li><a href="#">Tujuan Pembelajaran</a></li>
+          <li><a href="#">Bahan Ajar</a></li>
+          <li><a href="#">LKPD/Worksheet</a></li>
+          <li><a href="#">Upload Tugas</a></li>
+          <li><a href="#">Ulangan Harian 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 | Intan Endah Sari, S.Pd.Gr | Mapel PIPAS | SMK Islam Madinatul Ulum
+  </footer>
+
+  <script>
+    function toggleList(id) {
+      const el = document.getElementById(id);
+      const allLists = document.querySelectorAll('.list');
+      allLists.forEach(list => {
+        if (list.id !== id) list.style.display = 'none';
+      });
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

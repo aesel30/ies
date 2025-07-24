@@ -1,0 +1,204 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #629da1, #66a6ff);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Background sebagai banner */
+    .banner-bg {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background: url('sampul.jpg') center/cover no-repeat;
+      z-index: 0;
+    }
+
+    /* Container konten utama di atas background */
+    .main-content {
+      position: relative;
+      z-index: 1;
+      margin-top: -130px; /* tarik ke atas agar menimpa background */
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background-color: white;
+      /* margin-right: 350px; */
+    }
+
+    h3, p {
+      margin: 6px 0;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    /* Warna berbeda tiap kotak */
+.rectangle:nth-child(1) {
+  background: rgba(135, 206, 235, 0.5); /* skyblue */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(135, 206, 235, 0.7);
+}
+.rectangle:nth-child(1):hover {
+  background: rgba(135, 206, 235, 0.8);
+}
+
+.rectangle:nth-child(2) {
+  background: rgba(144, 238, 144, 0.5); /* lightgreen */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(144, 238, 144, 0.7);
+}
+.rectangle:nth-child(2):hover {
+  background: rgba(144, 238, 144, 0.8);
+}
+
+.rectangle:nth-child(3) {
+  background: rgba(255, 165, 0, 0.5); /* orange */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 165, 0, 0.7);
+}
+.rectangle:nth-child(3):hover {
+  background: rgba(255, 165, 0, 0.8);
+}
+
+.rectangle:nth-child(4) {
+  background: rgba(186, 85, 211, 0.5); /* medium orchid (ungu) */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(186, 85, 211, 0.7);
+}
+.rectangle:nth-child(4):hover {
+  background: rgba(186, 85, 211, 0.8);
+}
+
+/* List styling */
+.list {
+  display: none;
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style: none; /* hilangkan bullet default */
+}
+
+.list li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 18px;
+  font-weight: 600;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+/* Bullet custom */
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: currentColor;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* Link style */
+.list li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.list li a:hover {
+  color: #000;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Buat bullet warna matching kotak */
+/* Memakai nth-child pada parent kotak */
+.rectangle:nth-child(1) .list li::before {
+  background-color: #1e90ff;
+}
+.rectangle:nth-child(2) .list li::before {
+  background-color: #32cd32;
+}
+.rectangle:nth-child(3) .list li::before {
+  background-color: #ff8c00;
+}
+.rectangle:nth-child(4) .list li::before {
+  background-color: #9932cc;
+}
+
+
+    .rectangle {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 18px 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .rectangle:hover {
+      background: #f0f9ff;
+      transform: translateY(-2px);
+    }
+
+    .rectangle h3 {
+      font-size: 17px;
+      margin: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.2);
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+
+      .banner-bg {
+        height: 180px;
+      }
+
+      .main-content {
+        margin-top: -100px;
+        padding: 10px;
+      }
+    }
